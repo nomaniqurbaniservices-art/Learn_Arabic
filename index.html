@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomani Arabic Learning | Learn Arabic Professionally with Expert Guidance</title>
+    <meta name="description" content="Learn Arabic professionally with Nomani Arabic Learning. Expert Arabic classes in Hyderabad, Malakpet. Online Arabic speaking, grammar, reading & writing courses by Abdul Musawwir Nomani.">
+    <meta name="keywords" content="Arabic Classes Hyderabad, Arabic Classes Malakpet, Online Arabic Classes India, Learn Arabic Hyderabad, Arabic Speaking Course Hyderabad, Arabic Grammar Teacher Hyderabad, Nomani Arabic Learning">
+    <meta name="author" content="Abdul Musawwir Nomani">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #1B5E20;
+            --dark-green: #0D3B0F;
+            --light-green: #2E7D32;
+            --gold: #D4A843;
+            --gold-light: #E8C96A;
+            --gold-dark: #B8902D;
+            --black: #0A0A0A;
+            --dark: #1A1A1A;
+            --dark-gray: #2D2D2D;
+            --medium-gray: #6B6B6B;
+            --light-gray: #F5F5F0;
+            --white: #FFFFFF;
+            --cream: #FAF8F2;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #FAF8F2;
+            --bg-dark: #0A0A0A;
+            --text-primary: #1A1A1A;
+            --text-secondary: #6B6B6B;
+            --text-on-dark: #FFFFFF;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
+            --shadow-gold: 0 4px 20px rgba(212,168,67,0.3);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #0A0A0A;
+            --bg-secondary: #1A1A1A;
+            --bg-dark: #000000;
+            --text-primary: #F5F5F0;
+            --text-secondary: #A0A0A0;
+            --text-on-dark: #FFFFFF;
+            --white: #0A0A0A;
+            --cream: #1A1A1A;
+            --light-gray: #2D2D2D;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.4);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.5);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            transition: var(--transition);
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+
+        .loader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--dark-green); display: flex; align-items: center;
+            justify-content: center; z-index: 99999;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        .loader.hidden { opacity: 0; visibility: hidden; }
+        .loader-content { text-align: center; }
+        .loader-arabic {
+            font-family: 'Amiri', serif; font-size: 3rem; color: var(--gold);
+            margin-bottom: 1rem; animation: pulse 1.5s ease-in-out infinite;
+        }
+        .loader-bar {
+            width: 200px; height: 3px; background: rgba(255,255,255,0.2);
+            border-radius: 3px; margin: 0 auto; overflow: hidden;
+        }
+        .loader-bar::after {
+            content: ''; display: block; width: 40%; height: 100%;
+            background: var(--gold); border-radius: 3px;
+            animation: loading 1.2s ease-in-out infinite;
+        }
+        @keyframes loading { 0% { transform: translateX(-100%); } 100% { transform: translateX(350%); } }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+        .navbar {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;
+            padding: 1rem 0; transition: var(--transition);
+        }
+        .navbar.scrolled {
+            background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(20px);
+            padding: 0.6rem 0; box-shadow: 0 2px 30px rgba(0,0,0,0.3);
+        }
+        .nav-container {
+            max-width: 1300px; margin: 0 auto; padding: 0 2rem;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .nav-logo-icon {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            font-family: 'Amiri', serif; font-size: 1.5rem; color: var(--dark-green); font-weight: 700;
+        }
+        .nav-logo-text { display: flex; flex-direction: column; }
+        .nav-logo-text span:first-child {
+            font-family: 'Playfair Display', serif; font-size: 1.15rem;
+            font-weight: 700; color: var(--gold); line-height: 1.2;
+        }
+        .nav-logo-text span:last-child {
+            font-size: 0.65rem; color: rgba(255,255,255,0.6);
+            text-transform: uppercase; letter-spacing: 2px;
+        }
+        .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+        .nav-links a {
+            text-decoration: none; color: rgba(255,255,255,0.8);
+            font-size: 0.9rem; font-weight: 500; transition: var(--transition-fast);
+            position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--gold); transition: var(--transition-fast);
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--dark-green) !important; padding: 0.6rem 1.5rem;
+            border-radius: 50px; font-weight: 600 !important; font-size: 0.85rem !important;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-gold); color: var(--dark-green) !important; }
+        .theme-toggle {
+            background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+            color: var(--gold); width: 40px; height: 40px; border-radius: 50%;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; transition: var(--transition-fast);
+        }
+        .theme-toggle:hover { background: rgba(212,168,67,0.2); }
+        .mobile-toggle {
+            display: none; flex-direction: column; gap: 5px;
+            cursor: pointer; background: none; border: none; padding: 5px;
+        }
+        .mobile-toggle span {
+            width: 25px; height: 2px; background: var(--gold);
+            transition: var(--transition-fast); border-radius: 2px;
+        }
+        .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .mobile-toggle.active span:nth-child(2) { opacity: 0; }
+        .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        .mobile-menu {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background: rgba(10, 10, 10, 0.98); backdrop-filter: blur(20px); z-index: 9998;
+            align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transition: var(--transition);
+        }
+        .mobile-menu.active { opacity: 1; visibility: visible; }
+        .mobile-menu-links {
+            list-style: none; text-align: center;
+            display: flex; flex-direction: column; gap: 1.5rem;
+        }
+        .mobile-menu-links a {
+            text-decoration: none; color: rgba(255,255,255,0.9);
+            font-size: 1.5rem; font-family: 'Playfair Display', serif;
+            transition: var(--transition-fast);
+        }
+        .mobile-menu-links a:hover { color: var(--gold); }
+
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(165deg, #0D3B0F 0%, #1B5E20 30%, #0A0A0A 100%);
+            position: relative; display: flex; align-items: center; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4A843' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hero-bg-elements { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+        .hero-circle { position: absolute; border-radius: 50%; border: 1px solid rgba(212, 168, 67, 0.1); }
+        .hero-circle-1 { width: 600px; height: 600px; top: -200px; right: -200px; animation: float 20s ease-in-out infinite; }
+        .hero-circle-2 { width: 400px; height: 400px; bottom: -100px; left: -100px; animation: float 15s ease-in-out infinite reverse; }
+        .hero-circle-3 { width: 200px; height: 200px; top: 40%; right: 20%; border-color: rgba(212, 168, 67, 0.05); animation: float 10s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+        .hero-container {
+            max-width: 1300px; margin: 0 auto; padding: 8rem 2rem 4rem;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+            align-items: center; position: relative; z-index: 2;
+        }
+        .hero-content { animation: fadeInUp 1s ease 0.3s both; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: rgba(212, 168, 67, 0.15); border: 1px solid rgba(212, 168, 67, 0.3);
+            padding: 0.5rem 1.25rem; border-radius: 50px; color: var(--gold);
+            font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 2px; margin-bottom: 1.5rem;
+        }
+        .hero-badge-dot {
+            width: 8px; height: 8px; background: var(--gold);
+            border-radius: 50%; animation: blink 2s ease-in-out infinite;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .hero h1 {
+            font-family: 'Playfair Display', serif; font-size: 3.5rem;
+            font-weight: 800; color: #fff; line-height: 1.15; margin-bottom: 1.5rem;
+        }
+        .hero h1 .gold-text { color: var(--gold); display: block; }
+        .hero-subtitle {
+            font-size: 1.1rem; color: rgba(255,255,255,0.7); line-height: 1.8;
+            margin-bottom: 2.5rem; max-width: 520px;
+        }
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--dark-green); padding: 1rem 2.5rem; border-radius: 50px;
+            text-decoration: none; font-weight: 700; font-size: 0.95rem;
+            transition: var(--transition); border: none; cursor: pointer;
+            display: inline-flex; align-items: center; gap: 0.5rem;
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: var(--shadow-gold); }
+        .btn-secondary {
+            background: transparent; color: #fff; padding: 1rem 2.5rem;
+            border-radius: 50px; text-decoration: none; font-weight: 600;
+            font-size: 0.95rem; transition: var(--transition);
+            border: 1.5px solid rgba(255,255,255,0.3); cursor: pointer;
+            display: inline-flex; align-items: center; gap: 0.5rem;
+        }
+        .btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-3px); }
+        .btn-outline-gold {
+            background: transparent; color: var(--gold); padding: 1rem 2.5rem;
+            border-radius: 50px; text-decoration: none; font-weight: 600;
+            font-size: 0.95rem; transition: var(--transition);
+            border: 1.5px solid var(--gold); cursor: pointer;
+            display: inline-flex; align-items: center; gap: 0.5rem;
+        }
+        .btn-outline-gold:hover { background: var(--gold); color: var(--dark-green); transform: translateY(-3px); }
+        .hero-stats { display: flex; gap: 2.5rem; }
+        .hero-stat { display: flex; flex-direction: column; }
+        .hero-stat-number {
+            font-family: 'Playfair Display', serif; font-size: 2rem;
+            font-weight: 800; color: var(--gold);
+        }
+        .hero-stat-label {
+            font-size: 0.8rem; color: rgba(255,255,255,0.5);
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        .hero-visual { position: relative; animation: fadeInUp 1s ease 0.6s both; }
+        .hero-card {
+            background: rgba(255,255,255,0.05); backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 168, 67, 0.2); border-radius: 24px;
+            padding: 3rem; position: relative; overflow: hidden;
+        }
+        .hero-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-dark), var(--gold));
+        }
+        .hero-card-arabic {
+            font-family: 'Amiri', serif; font-size: 4rem; color: var(--gold);
+            text-align: center; margin-bottom: 1.5rem; line-height: 1.4;
+        }
+        .hero-card-divider { width: 60px; height: 2px; background: var(--gold); margin: 0 auto 1.5rem; }
+        .hero-card-features { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+        .hero-card-features li {
+            display: flex; align-items: center; gap: 0.75rem;
+            color: rgba(255,255,255,0.8); font-size: 0.95rem;
+        }
+        .hero-card-features li .check {
+            width: 24px; height: 24px; background: rgba(212, 168, 67, 0.2);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: var(--gold); font-size: 0.7rem; flex-shrink: 0;
+        }
+        .hero-floating-card {
+            position: absolute; background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(15px); border: 1px solid rgba(212,168,67,0.2);
+            border-radius: 16px; padding: 1rem 1.25rem;
+            animation: floatCard 6s ease-in-out infinite;
+        }
+        .hero-floating-card-1 { top: -20px; right: -20px; animation-delay: 0s; }
+        .hero-floating-card-2 { bottom: 40px; left: -30px; animation-delay: 3s; }
+        @keyframes floatCard { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        .floating-card-icon { font-size: 1.5rem; margin-bottom: 0.3rem; }
+        .floating-card-text { font-size: 0.75rem; color: rgba(255,255,255,0.7); font-weight: 500; }
+        .floating-card-value { font-size: 0.9rem; color: var(--gold); font-weight: 700; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section { padding: 6rem 0; }
+        .section-dark { background: var(--bg-secondary); }
+        .section-green { background: linear-gradient(165deg, var(--dark-green), var(--primary-green)); color: #fff; }
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 2rem; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-label {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            color: var(--gold); font-size: 0.8rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3px; margin-bottom: 1rem;
+        }
+        .section-label-line { width: 30px; height: 1.5px; background: var(--gold); }
+        .section-title {
+            font-family: 'Playfair Display', serif; font-size: 2.75rem;
+            font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.25;
+        }
+        .section-green .section-title { color: #fff; }
+        .section-subtitle {
+            font-size: 1.05rem; color: var(--text-secondary);
+            max-width: 600px; margin: 0 auto;
+        }
+        .section-green .section-subtitle { color: rgba(255,255,255,0.7); }
+
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-image-wrapper { position: relative; }
+        .about-image-card {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            border-radius: 24px; padding: 3rem; position: relative; overflow: hidden;
+        }
+        .about-image-card::after {
+            content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4A843' fill-opacity='0.05'%3E%3Cpath d='M20 20l10-10v20H10V10z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .about-arabic-large {
+            font-family: 'Amiri', serif; font-size: 5rem; color: var(--gold);
+            text-align: center; line-height: 1.3; position: relative; z-index: 1; margin-bottom: 1.5rem;
+        }
+        .about-image-label {
+            text-align: center; color: rgba(255,255,255,0.7);
+            font-size: 0.9rem; position: relative; z-index: 1;
+        }
+        .about-experience-badge {
+            position: absolute; bottom: -20px; right: -20px;
+            background: var(--gold); color: var(--dark-green);
+            padding: 1.25rem 1.75rem; border-radius: 16px;
+            text-align: center; box-shadow: var(--shadow-gold); z-index: 2;
+        }
+        .about-experience-badge .number {
+            font-family: 'Playfair Display', serif; font-size: 2rem;
+            font-weight: 800; display: block; line-height: 1;
+        }
+        .about-experience-badge .label {
+            font-size: 0.7rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        .about-content h3 {
+            font-family: 'Playfair Display', serif; font-size: 2rem;
+            font-weight: 700; margin-bottom: 1.5rem; color: var(--text-primary);
+        }
+        .about-content p {
+            color: var(--text-secondary); margin-bottom: 1.5rem;
+            font-size: 1rem; line-height: 1.8;
+        }
+        .about-mediums { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+        .about-medium {
+            display: flex; align-items: center; gap: 0.75rem; padding: 1rem;
+            background: var(--bg-primary); border-radius: 12px;
+            border: 1px solid rgba(212,168,67,0.15); transition: var(--transition-fast);
+        }
+        .about-medium:hover { border-color: var(--gold); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+        .about-medium-icon {
+            width: 36px; height: 36px; background: rgba(212,168,67,0.1);
+            border-radius: 8px; display: flex; align-items: center;
+            justify-content: center; color: var(--gold); font-size: 1rem; flex-shrink: 0;
+        }
+        .about-medium-text { font-size: 0.85rem; font-weight: 600; color: var(--text-primary); }
+
+        /* Schedule Section */
+        .schedule-section { padding: 5rem 0; }
+        .schedule-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 900px; margin: 0 auto; }
+        .schedule-card {
+            background: var(--bg-primary); border-radius: 20px; padding: 2.5rem;
+            border: 1px solid rgba(212,168,67,0.15); transition: var(--transition);
+            position: relative; overflow: hidden;
+        }
+        .schedule-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: rgba(212,168,67,0.4); }
+        .schedule-card::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+        }
+        .schedule-card-icon {
+            width: 60px; height: 60px; background: rgba(212,168,67,0.12);
+            border-radius: 16px; display: flex; align-items: center;
+            justify-content: center; font-size: 1.8rem; margin-bottom: 1.25rem;
+        }
+        .schedule-card h4 {
+            font-family: 'Playfair Display', serif; font-size: 1.25rem;
+            color: var(--text-primary); margin-bottom: 0.5rem;
+        }
+        .schedule-card p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; }
+        .schedule-card .highlight {
+            color: var(--gold); font-weight: 700; font-size: 1.1rem; display: block; margin-top: 0.5rem;
+        }
+        .schedule-card .time-big {
+            font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 800;
+            color: var(--primary-green); margin: 0.75rem 0;
+        }
+        [data-theme="dark"] .schedule-card .time-big { color: var(--gold); }
+        .schedule-card .badge-extra {
+            display: inline-block; background: rgba(212,168,67,0.12);
+            border: 1px solid rgba(212,168,67,0.3); color: var(--gold);
+            padding: 0.35rem 1rem; border-radius: 50px; font-size: 0.75rem;
+            font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.75rem;
+        }
+        .schedule-note {
+            max-width: 900px; margin: 2rem auto 0; text-align: center;
+            background: linear-gradient(135deg, rgba(212,168,67,0.08), rgba(212,168,67,0.03));
+            border: 1px solid rgba(212,168,67,0.2); border-radius: 16px; padding: 1.5rem 2rem;
+        }
+        .schedule-note p {
+            color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;
+        }
+        .schedule-note strong { color: var(--gold); }
+        .schedule-holiday-badges { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
+        .holiday-badge {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            background: rgba(220, 53, 69, 0.1); border: 1px solid rgba(220, 53, 69, 0.25);
+            color: #dc3545; padding: 0.4rem 1rem; border-radius: 50px;
+            font-size: 0.8rem; font-weight: 600;
+        }
+        [data-theme="dark"] .holiday-badge { background: rgba(220, 53, 69, 0.15); color: #ff6b6b; border-color: rgba(255,107,107,0.3); }
+
+        .course-card {
+            background: var(--bg-primary); border-radius: 24px; overflow: hidden;
+            box-shadow: var(--shadow-lg); border: 1px solid rgba(212,168,67,0.1);
+        }
+        .course-card-header {
+            background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
+            padding: 3rem; text-align: center; position: relative; overflow: hidden;
+        }
+        .course-card-header::before {
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4A843' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .course-duration-badge {
+            display: inline-block; background: rgba(212,168,67,0.2);
+            border: 1px solid rgba(212,168,67,0.4); color: var(--gold);
+            padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.8rem;
+            font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
+            margin-bottom: 1.5rem; position: relative; z-index: 1;
+        }
+        .course-card-header h3 {
+            font-family: 'Playfair Display', serif; font-size: 2rem;
+            color: #fff; margin-bottom: 0.5rem; position: relative; z-index: 1;
+        }
+        .course-card-header p { color: rgba(255,255,255,0.7); font-size: 0.95rem; position: relative; z-index: 1; }
+        .course-info-bar {
+            display: flex; justify-content: center; gap: 2rem; padding: 1.5rem;
+            background: rgba(0,0,0,0.2); position: relative; z-index: 1; flex-wrap: wrap;
+        }
+        .course-info-item { text-align: center; }
+        .course-info-item .value { font-weight: 700; color: var(--gold); font-size: 1.05rem; }
+        .course-info-item .label { font-size: 0.72rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; }
+        .course-card-body { padding: 3rem; }
+        .course-card-body h4 {
+            font-family: 'Playfair Display', serif; font-size: 1.3rem;
+            margin-bottom: 1.5rem; color: var(--text-primary);
+        }
+        .course-topics { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
+        .course-topic {
+            display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem;
+            background: var(--bg-secondary); border-radius: 10px; transition: var(--transition-fast);
+        }
+        .course-topic:hover { transform: translateX(5px); background: rgba(212,168,67,0.08); }
+        .course-topic-icon {
+            width: 32px; height: 32px; background: rgba(212,168,67,0.15);
+            border-radius: 8px; display: flex; align-items: center;
+            justify-content: center; color: var(--gold); font-size: 0.85rem; flex-shrink: 0;
+        }
+        .course-topic-text { font-size: 0.9rem; font-weight: 500; color: var(--text-primary); }
+        .course-card-footer {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 2rem 3rem; border-top: 1px solid rgba(212,168,67,0.1);
+            background: var(--bg-secondary);
+        }
+        .course-price { display: flex; flex-direction: column; }
+        .course-price .amount {
+            font-family: 'Playfair Display', serif; font-size: 2.5rem;
+            font-weight: 800; color: var(--primary-green);
+        }
+        [data-theme="dark"] .course-price .amount { color: var(--gold); }
+        .course-price .period { font-size: 0.85rem; color: var(--text-secondary); }
+
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .feature-card {
+            background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);
+            border: 1px solid rgba(212,168,67,0.15); border-radius: 20px;
+            padding: 2rem; transition: var(--transition); position: relative; overflow: hidden;
+        }
+        .feature-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0; transition: var(--transition);
+        }
+        .feature-card:hover { transform: translateY(-8px); border-color: rgba(212,168,67,0.4); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .feature-card:hover::before { opacity: 1; }
+        .feature-icon {
+            width: 56px; height: 56px; background: rgba(212,168,67,0.15);
+            border-radius: 14px; display: flex; align-items: center;
+            justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;
+        }
+        .feature-card h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem; }
+        .feature-card p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+        .instructor-grid { display: grid; grid-template-columns: 400px 1fr; gap: 4rem; align-items: center; }
+        .instructor-image-wrapper { position: relative; }
+        .instructor-image-card {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            border-radius: 24px; padding: 3rem; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .instructor-image-card::after {
+            content: ''; position: absolute; bottom: 0; right: 0;
+            width: 150px; height: 150px; border-radius: 50%;
+            border: 1px solid rgba(212,168,67,0.1);
+        }
+        .instructor-avatar {
+            width: 140px; height: 140px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            border-radius: 50%; margin: 0 auto 1.5rem; display: flex;
+            align-items: center; justify-content: center;
+            font-family: 'Playfair Display', serif; font-size: 3rem;
+            color: var(--dark-green); font-weight: 800; position: relative; z-index: 1;
+        }
+        .instructor-image-card h3 {
+            font-family: 'Playfair Display', serif; font-size: 1.5rem;
+            color: #fff; margin-bottom: 0.5rem; position: relative; z-index: 1;
+        }
+        .instructor-image-card p {
+            color: var(--gold); font-size: 0.85rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 2px; position: relative; z-index: 1;
+        }
+        .instructor-verified {
+            position: absolute; top: 1rem; right: 1rem; background: var(--gold);
+            color: var(--dark-green); padding: 0.4rem 0.8rem; border-radius: 50px;
+            font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; gap: 0.3rem;
+        }
+        .instructor-content h3 {
+            font-family: 'Playfair Display', serif; font-size: 2rem;
+            color: var(--text-primary); margin-bottom: 1rem;
+        }
+        .instructor-content > p { color: var(--text-secondary); font-size: 1rem; line-height: 1.8; margin-bottom: 2rem; }
+        .instructor-credentials { display: flex; flex-direction: column; gap: 1rem; }
+        .credential {
+            display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem;
+            background: var(--bg-secondary); border-radius: 12px;
+            border-left: 3px solid var(--gold); transition: var(--transition-fast);
+        }
+        .credential:hover { transform: translateX(5px); box-shadow: var(--shadow-sm); }
+        .credential-icon {
+            width: 40px; height: 40px; background: rgba(212,168,67,0.1);
+            border-radius: 10px; display: flex; align-items: center;
+            justify-content: center; color: var(--gold); font-size: 1.1rem; flex-shrink: 0;
+        }
+        .credential-text { font-weight: 600; color: var(--text-primary); font-size: 0.95rem; }
+
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .testimonial-card {
+            background: var(--bg-primary); border-radius: 20px; padding: 2rem;
+            border: 1px solid rgba(212,168,67,0.1); transition: var(--transition); position: relative;
+        }
+        .testimonial-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: rgba(212,168,67,0.3); }
+        .testimonial-quote {
+            font-family: 'Playfair Display', serif; font-size: 3rem;
+            color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 0.5rem;
+        }
+        .testimonial-stars { display: flex; gap: 0.25rem; margin-bottom: 1rem; }
+        .testimonial-stars span { color: var(--gold); font-size: 1rem; }
+        .testimonial-text {
+            font-size: 1rem; color: var(--text-primary); line-height: 1.7;
+            margin-bottom: 1.5rem; font-style: italic;
+        }
+        .testimonial-author { display: flex; align-items: center; gap: 1rem; }
+        .testimonial-avatar {
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: var(--gold); font-family: 'Playfair Display', serif;
+            font-weight: 700; font-size: 1.1rem;
+        }
+        .testimonial-author-info .name { font-weight: 700; color: var(--text-primary); font-size: 0.95rem; }
+        .testimonial-author-info .role { font-size: 0.8rem; color: var(--text-secondary); }
+
+        /* Pricing Section */
+        .pricing-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 900px; margin: 0 auto; }
+        .pricing-card {
+            background: var(--bg-primary); border-radius: 24px; overflow: hidden;
+            box-shadow: var(--shadow-xl); border: 2px solid rgba(212,168,67,0.3); position: relative;
+        }
+        .pricing-card.featured { border-color: var(--gold); }
+        .pricing-popular {
+            position: absolute; top: 1.5rem; right: 1.5rem; background: var(--gold);
+            color: var(--dark-green); padding: 0.4rem 1rem; border-radius: 50px;
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1px; z-index: 2;
+        }
+        .pricing-header {
+            background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
+            padding: 2.5rem 2rem; text-align: center; position: relative; overflow: hidden;
+        }
+        .pricing-header::before {
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4A843' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .pricing-header h3 {
+            font-family: 'Playfair Display', serif; font-size: 1.3rem;
+            color: #fff; margin-bottom: 0.75rem; position: relative; z-index: 1;
+        }
+        .pricing-amount { position: relative; z-index: 1; }
+        .pricing-amount .currency { font-size: 1.3rem; color: var(--gold); font-weight: 600; vertical-align: top; }
+        .pricing-amount .price {
+            font-family: 'Playfair Display', serif; font-size: 3.2rem;
+            color: var(--gold); font-weight: 800; line-height: 1;
+        }
+        .pricing-amount .period { font-size: 0.9rem; color: rgba(255,255,255,0.6); }
+        .pricing-body { padding: 2rem; }
+        .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.5rem; }
+        .pricing-features li {
+            display: flex; align-items: center; gap: 0.75rem;
+            color: var(--text-primary); font-size: 0.9rem;
+        }
+        .pricing-features li .icon {
+            width: 22px; height: 22px; background: rgba(27,94,32,0.1);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: var(--primary-green); font-size: 0.65rem; flex-shrink: 0;
+        }
+        [data-theme="dark"] .pricing-features li .icon { background: rgba(212,168,67,0.15); color: var(--gold); }
+        .pricing-cta { width: 100%; text-align: center; justify-content: center; font-size: 1rem; padding: 1rem 2rem; }
+        .pricing-tag {
+            display: inline-block; background: rgba(212,168,67,0.1);
+            border: 1px solid rgba(212,168,67,0.25); color: var(--gold);
+            padding: 0.3rem 0.8rem; border-radius: 50px; font-size: 0.7rem;
+            font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+            margin-bottom: 0.75rem; position: relative; z-index: 1;
+        }
+        .pricing-extra-note {
+            text-align: center; margin-top: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;
+            background: rgba(212,168,67,0.06); border: 1px solid rgba(212,168,67,0.15);
+            border-radius: 12px; padding: 1.25rem 1.5rem;
+        }
+        .pricing-extra-note p { color: var(--text-secondary); font-size: 0.9rem; }
+        .pricing-extra-note strong { color: var(--gold); }
+
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif; font-size: 2rem;
+            color: var(--text-primary); margin-bottom: 0.5rem;
+        }
+        .contact-info > p { color: var(--text-secondary); font-size: 1rem; line-height: 1.7; }
+        .contact-details { display: flex; flex-direction: column; gap: 1.25rem; }
+        .contact-item {
+            display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem;
+            background: var(--bg-secondary); border-radius: 12px; transition: var(--transition-fast);
+        }
+        .contact-item:hover { transform: translateX(5px); box-shadow: var(--shadow-sm); }
+        .contact-item-icon {
+            width: 48px; height: 48px; background: rgba(212,168,67,0.1);
+            border-radius: 12px; display: flex; align-items: center;
+            justify-content: center; color: var(--gold); font-size: 1.3rem; flex-shrink: 0;
+        }
+        .contact-item-text { display: flex; flex-direction: column; }
+        .contact-item-text .label {
+            font-size: 0.75rem; color: var(--text-secondary);
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        .contact-item-text .value { font-weight: 600; color: var(--text-primary); font-size: 1rem; }
+        .contact-item-text .value a { color: var(--text-primary); text-decoration: none; }
+        .contact-item-text .value a:hover { color: var(--gold); }
+        .contact-form-card {
+            background: var(--bg-primary); border-radius: 24px; padding: 2.5rem;
+            box-shadow: var(--shadow-lg); border: 1px solid rgba(212,168,67,0.1);
+        }
+        .contact-form-card h4 {
+            font-family: 'Playfair Display', serif; font-size: 1.3rem;
+            color: var(--text-primary); margin-bottom: 1.5rem;
+        }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label {
+            display: block; font-size: 0.85rem; font-weight: 600;
+            color: var(--text-primary); margin-bottom: 0.4rem;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 0.85rem 1rem;
+            border: 1.5px solid rgba(212,168,67,0.2); border-radius: 10px;
+            font-family: 'Inter', sans-serif; font-size: 0.95rem;
+            color: var(--text-primary); background: var(--bg-secondary);
+            transition: var(--transition-fast); outline: none;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212,168,67,0.1);
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-buttons { display: flex; gap: 1rem; margin-top: 0.5rem; }
+        .form-buttons .btn-primary, .form-buttons .btn-outline-gold { flex: 1; text-align: center; justify-content: center; }
+
+        .footer {
+            background: var(--black); color: rgba(255,255,255,0.7); padding: 4rem 0 0;
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+            padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-brand .nav-logo { margin-bottom: 1rem; }
+        .footer-brand p { font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem; }
+        .footer-social { display: flex; gap: 0.75rem; }
+        .footer-social a {
+            width: 40px; height: 40px; background: rgba(255,255,255,0.08);
+            border-radius: 10px; display: flex; align-items: center;
+            justify-content: center; color: rgba(255,255,255,0.6);
+            text-decoration: none; transition: var(--transition-fast); font-size: 1rem;
+        }
+        .footer-social a:hover { background: var(--gold); color: var(--dark-green); }
+        .footer-col h4 {
+            font-family: 'Playfair Display', serif; font-size: 1.1rem;
+            color: #fff; margin-bottom: 1.25rem;
+        }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-col a {
+            color: rgba(255,255,255,0.6); text-decoration: none;
+            font-size: 0.9rem; transition: var(--transition-fast);
+        }
+        .footer-col a:hover { color: var(--gold); padding-left: 5px; }
+        .footer-bottom {
+            padding: 1.5rem 0; text-align: center; font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+        }
+        .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+        .floating-buttons {
+            position: fixed; bottom: 2rem; right: 2rem; display: flex;
+            flex-direction: column; gap: 0.75rem; z-index: 9990;
+        }
+        .float-btn {
+            width: 56px; height: 56px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 1.4rem;
+            color: #fff; text-decoration: none; box-shadow: var(--shadow-lg);
+            transition: var(--transition); border: none; cursor: pointer;
+            position: relative;
+        }
+        .float-btn:hover { transform: scale(1.1); }
+        .float-whatsapp { background: #25D366; }
+        .float-call { background: var(--gold); color: var(--dark-green); }
+        .float-btn .tooltip {
+            position: absolute; right: 70px; background: var(--dark); color: #fff;
+            padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.8rem;
+            white-space: nowrap; opacity: 0; visibility: hidden; transition: var(--transition-fast);
+        }
+        .float-btn:hover .tooltip { opacity: 1; visibility: visible; }
+
+        .scroll-top {
+            position: fixed; bottom: 2rem; left: 2rem; width: 48px; height: 48px;
+            background: var(--primary-green); color: #fff; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem; border: none; cursor: pointer; z-index: 9990;
+            opacity: 0; visibility: hidden; transition: var(--transition);
+            box-shadow: var(--shadow-md);
+        }
+        .scroll-top.visible { opacity: 1; visibility: visible; }
+        .scroll-top:hover { background: var(--gold); color: var(--dark-green); transform: translateY(-3px); }
+
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-left { opacity: 0; transform: translateX(-40px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .reveal-left.active { opacity: 1; transform: translateX(0); }
+        .reveal-right { opacity: 0; transform: translateX(40px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .reveal-right.active { opacity: 1; transform: translateX(0); }
+
+        .form-success { display: none; text-align: center; padding: 2rem; }
+        .form-success.show { display: block; }
+        .form-success .icon { font-size: 3rem; margin-bottom: 1rem; }
+        .form-success h4 { font-family: 'Playfair Display', serif; color: var(--primary-green); margin-bottom: 0.5rem; }
+        [data-theme="dark"] .form-success h4 { color: var(--gold); }
+        .form-success p { color: var(--text-secondary); font-size: 0.9rem; }
+
+        @media (max-width: 1024px) {
+            .hero-container { grid-template-columns: 1fr; text-align: center; }
+            .hero-subtitle { margin: 0 auto 2.5rem; }
+            .hero-buttons { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .hero-visual { max-width: 500px; margin: 0 auto; }
+            .about-grid, .instructor-grid { grid-template-columns: 1fr; }
+            .instructor-grid { gap: 2rem; }
+            .instructor-image-wrapper { max-width: 400px; margin: 0 auto; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .pricing-wrapper { grid-template-columns: 1fr; max-width: 500px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: flex; }
+            .mobile-menu { display: flex; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-container { padding: 7rem 1.5rem 3rem; }
+            .section { padding: 4rem 0; }
+            .section-title { font-size: 2rem; }
+            .course-topics { grid-template-columns: 1fr; }
+            .course-card-footer {
+                flex-direction: column; gap: 1.5rem;
+                text-align: center; padding: 2rem;
+            }
+            .course-info-bar { flex-wrap: wrap; gap: 1.5rem; }
+            .form-row { grid-template-columns: 1fr; }
+            .form-buttons { flex-direction: column; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .about-mediums { grid-template-columns: 1fr; }
+            .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+            .features-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .hero-floating-card { display: none; }
+            .floating-buttons { bottom: 1.5rem; right: 1.5rem; }
+            .scroll-top { bottom: 1.5rem; left: 1.5rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .hero-buttons a { width: 100%; max-width: 280px; text-align: center; justify-content: center; }
+            .pricing-body { padding: 2rem; }
+            .schedule-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2rem; }
+            .hero-card { padding: 2rem; }
+            .hero-card-arabic { font-size: 3rem; }
+            .about-arabic-large { font-size: 3.5rem; }
+            .nav-logo-text span:first-child { font-size: 1rem; }
+            .nav-logo-icon { width: 40px; height: 40px; font-size: 1.2rem; }
+            .section-title { font-size: 1.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-arabic">بِسْمِ ٱللَّٰهِ</div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <div class="nav-logo-icon">ن</div>
+                <div class="nav-logo-text">
+                    <span>Nomani Arabic</span>
+                    <span>Learning Institute</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#instructor">Instructor</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button></li>
+                <li><a href="#contact" class="nav-cta">Join Now</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="#courses" onclick="closeMobileMenu()">Courses</a></li>
+            <li><a href="#schedule" onclick="closeMobileMenu()">Schedule</a></li>
+            <li><a href="#instructor" onclick="closeMobileMenu()">Instructor</a></li>
+            <li><a href="#testimonials" onclick="closeMobileMenu()">Reviews</a></li>
+            <li><a href="#pricing" onclick="closeMobileMenu()">Pricing</a></li>
+            <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+            <li><button class="theme-toggle" onclick="toggleTheme()" style="margin: 0 auto;">🌙</button></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-elements">
+            <div class="hero-circle hero-circle-1"></div>
+            <div class="hero-circle hero-circle-2"></div>
+            <div class="hero-circle hero-circle-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Premium Arabic Institute
+                </div>
+                <h1>
+                    Learn Arabic<br>
+                    Professionally with<br>
+                    <span class="gold-text">Expert Guidance</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Master Arabic Language, Grammar, Speaking, Writing, Listening & Reading through personalised One-to-One Classes with a certified scholar.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">✦ Join Now</a>
+                    <a href="https://wa.me/919205800494?text=Assalamu%20Alaikum!%20I%20want%20a%20Free%20Demo%20Class" target="_blank" class="btn-secondary">📱 Free Demo Class</a>
+                    <a href="#contact" class="btn-outline-gold">✉ Contact Us</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number counter-animate" data-target="500">0</span>
+                        <span class="hero-stat-label">Students Taught</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">⭐ 4.9</span>
+                        <span class="hero-stat-label">Student Rating</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number counter-animate" data-target="6">0</span>
+                        <span class="hero-stat-label">Month Program</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hero-card-arabic">تَعَلَّمِ الْعَرَبِيَّةَ</div>
+                    <div class="hero-card-divider"></div>
+                    <ul class="hero-card-features">
+                        <li><span class="check">✓</span> Arabic Speaking & Conversation</li>
+                        <li><span class="check">✓</span> Grammar — Nahw & Sarf</li>
+                        <li><span class="check">✓</span> Reading & Writing Skills</li>
+                        <li><span class="check">✓</span> One-to-One Personal Classes</li>
+                        <li><span class="check">✓</span> Daily Live Sessions (Mon–Fri)</li>
+                        <li><span class="check">✓</span> Beginner to Advanced Level</li>
+                    </ul>
+                </div>
+                <div class="hero-floating-card hero-floating-card-1">
+                    <div class="floating-card-icon">📚</div>
+                    <div class="floating-card-text">Course</div>
+                    <div class="floating-card-value">6 Months</div>
+                </div>
+                <div class="hero-floating-card hero-floating-card-2">
+                    <div class="floating-card-icon">🎯</div>
+                    <div class="floating-card-text">Mode</div>
+                    <div class="floating-card-value">Live Online</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section section-dark" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper reveal-left">
+                    <div class="about-image-card">
+                        <div class="about-arabic-large">نُعَلِّمُكَ<br>الْعَرَبِيَّةَ</div>
+                        <p class="about-image-label">We Teach You Arabic — Professionally</p>
+                    </div>
+                    <div class="about-experience-badge">
+                        <span class="number">10+</span>
+                        <span class="label">Years Experience</span>
+                    </div>
+                </div>
+                <div class="about-content reveal-right">
+                    <div class="section-label">
+                        <span class="section-label-line"></span> About Us <span class="section-label-line"></span>
+                    </div>
+                    <h3>About Nomani Arabic Learning</h3>
+                    <p>Nomani Arabic Learning is a premium online Arabic institute founded by <strong>Abdul Musawwir Nomani</strong>, a certified Islamic scholar and Arabic language expert.</p>
+                    <p>We teach Arabic from beginner to advanced level using simple, practical, and professional methods. Our approach focuses on real-world Arabic usage, ensuring students can speak, read, and write Arabic confidently.</p>
+                    <div class="about-mediums">
+                        <div class="about-medium">
+                            <div class="about-medium-icon">🇸🇦</div>
+                            <span class="about-medium-text">Urdu to Arabic</span>
+                        </div>
+                        <div class="about-medium">
+                            <div class="about-medium-icon">🇬🇧</div>
+                            <span class="about-medium-text">English to Arabic</span>
+                        </div>
+                        <div class="about-medium">
+                            <div class="about-medium-icon">📝</div>
+                            <span class="about-medium-text">Urdu to English</span>
+                        </div>
+                        <div class="about-medium">
+                            <div class="about-medium-icon">👤</div>
+                            <span class="about-medium-text">One-to-One Classes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="section" id="courses">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <span class="section-label-line"></span> Our Courses <span class="section-label-line"></span>
+                </div>
+                <h2 class="section-title">Complete Arabic Course</h2>
+                <p class="section-subtitle">A comprehensive 6-month program designed to take you from beginner to confident Arabic speaker</p>
+            </div>
+            <div class="course-card reveal">
+                <div class="course-card-header">
+                    <span class="course-duration-badge">6 Month Program</span>
+                    <h3>Professional Arabic Language Course</h3>
+                    <p>Master every aspect of Arabic — from grammar to fluent conversation</p>
+                    <div class="course-info-bar">
+                        <div class="course-info-item">
+                            <div class="value">6 Months</div>
+                            <div class="label">Duration</div>
+                        </div>
+                        <div class="course-info-item">
+                            <div class="value">Online Live</div>
+                            <div class="label">Mode</div>
+                        </div>
+                        <div class="course-info-item">
+                            <div class="value">7:00 – 8:30 AM</div>
+                            <div class="label">Daily Timing</div>
+                        </div>
+                        <div class="course-info-item">
+                            <div class="value">1-on-1</div>
+                            <div class="label">Personal</div>
+                        </div>
+                        <div class="course-info-item">
+                            <div class="value">Mon – Fri</div>
+                            <div class="label">Working Days</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card-body">
+                    <h4>What You Will Learn</h4>
+                    <div class="course-topics">
+                        <div class="course-topic">
+                            <div class="course-topic-icon">🗣️</div>
+                            <span class="course-topic-text">Arabic Speaking</span>
+                        </div>
+                        <div class="course-topic">
+                            <div class="course-topic-icon">📖</div>
+                            <span class="course-topic-text">Arabic Grammar (Nahw & Sarf)</span>
+                        </div>
+                        <div class="course-topic">
+                            <div class="course-topic-icon">📚</div>
+                            <span class="course-topic-text">Reading Skills</span>
+                        </div>
+                        <div class="course-topic">
+                            <div class="course-topic-icon">✍️</div>
+                            <span class="course-topic-text">Writing Skills</span>
+                        </div>
+                        <div class="course-topic">
+                            <div class="course-topic-icon">👂</div>
+                            <span class="course-topic-text">Listening Practice</span>
+                        </div>
+                        <div class="course-topic">
+                            <div class="course-topic-icon">📝</div>
+                            <span class="course-topic-text">Vocabulary Building</span>
+                        </div>
+                        <div class="course-topic">
+                            <div class="course-topic-icon">💬</div>
+                            <span class="course-topic-text">Sentence Formation</span>
+                        </div>
+                        <div class="course-topic">
+                            <div class="course-topic-icon">🤝</div>
+                            <span class="course-topic-text">Daily Conversation Arabic</span>
+                        </div>
+                        <div class="course-topic">
+                            <div class="course-topic-icon">🕌</div>
+                            <span class="course-topic-text">Islamic Arabic Understanding</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card-footer">
+                    <div class="course-price">
+                        <span class="amount">₹4,999</span>
+                        <span class="period">Per Month • 6 Month Program</span>
+                    </div>
+                    <a href="#contact" class="btn-primary">Enroll Today ✦</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule & Timing Section -->
+    <section class="section section-dark schedule-section" id="schedule">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <span class="section-label-line"></span> Class Schedule <span class="section-label-line"></span>
+                </div>
+                <h2 class="section-title">Class Timing & Schedule</h2>
+                <p class="section-subtitle">Our well-structured schedule ensures consistent learning with proper rest days</p>
+            </div>
+            <div class="schedule-grid">
+                <div class="schedule-card reveal-left">
+                    <div class="schedule-card-icon">⏰</div>
+                    <h4>Regular Class Timing</h4>
+                    <p>Daily live one-to-one classes in the early morning for a fresh and focused learning experience.</p>
+                    <div class="time-big">7:00 AM – 8:30 AM</div>
+                    <p>Every <strong>Monday to Friday</strong></p>
+                    <span class="badge-extra">✦ Regular Batch • No Extra Charge</span>
+                </div>
+                <div class="schedule-card reveal-right">
+                    <div class="schedule-card-icon">🔄</div>
+                    <h4>Flexible Timing Option</h4>
+                    <p>Can't attend the morning batch? We also offer flexible timing slots that fit your personal schedule — <strong>subject to tutor availability.</strong></p>
+                    <div class="time-big">Custom Timing</div>
+                    <p>If it fits with the tutor's schedule</p>
+                    <span class="badge-extra">+₹500/Month Extra Charge</span>
+                </div>
+            </div>
+            <div class="schedule-note reveal">
+                <p>📅 Classes are held <strong>Monday to Friday</strong> every week. Students get proper rest and revision time on weekends.</p>
+                <div class="schedule-holiday-badges">
+                    <span class="holiday-badge">🚫 Saturday — Holiday</span>
+                    <span class="holiday-badge">🚫 Sunday — Holiday</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section section-green" id="whyus">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <span class="section-label-line"></span> Why Choose Us <span class="section-label-line"></span>
+                </div>
+                <h2 class="section-title">Why Students Prefer Us</h2>
+                <p class="section-subtitle">We provide a premium learning experience with personal attention and expert teaching</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h4>One-to-One Personal Teaching</h4>
+                    <p>Individual attention for maximum learning efficiency and personalised pace</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📺</div>
+                    <h4>Daily Live Classes</h4>
+                    <p>Interactive live sessions every day (Mon–Fri) to ensure consistent progress</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🌱</div>
+                    <h4>Beginner Friendly</h4>
+                    <p>No prior Arabic knowledge needed. We start from absolute basics</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🌐</div>
+                    <h4>Learn in Urdu or English</h4>
+                    <p>Choose your preferred medium of instruction for better understanding</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📋</div>
+                    <h4>Custom Arabic Notes</h4>
+                    <p>Professionally prepared notes and materials by our expert instructor</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🗣️</div>
+                    <h4>Practical Speaking Training</h4>
+                    <p>Real conversation practice to build confidence in Arabic speaking</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">⏰</div>
+                    <h4>Flexible Timings Available</h4>
+                    <p>Choose custom timing if it fits with the tutor's schedule (+₹500/month)</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📞</div>
+                    <h4>Direct Teacher Support</h4>
+                    <p>Direct access to your instructor for doubts and guidance anytime</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🎓</div>
+                    <h4>Personal Attention</h4>
+                    <p>Focused teaching methodology tailored to your learning style</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">✨</div>
+                    <h4>Premium Learning Experience</h4>
+                    <p>Professional, structured, and high-quality Arabic education</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="section section-dark" id="instructor">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <span class="section-label-line"></span> Meet Your Instructor <span class="section-label-line"></span>
+                </div>
+                <h2 class="section-title">Your Expert Arabic Teacher</h2>
+                <p class="section-subtitle">Learn directly from a certified scholar with years of teaching experience</p>
+            </div>
+            <div class="instructor-grid">
+                <div class="instructor-image-wrapper reveal-left">
+                    <div class="instructor-image-card">
+                        <div class="instructor-verified">✓ Verified Scholar</div>
+                        <div class="instructor-avatar">AN</div>
+                        <h3>Abdul Musawwir Nomani</h3>
+                        <p>Founder & Lead Instructor</p>
+                    </div>
+                </div>
+                <div class="instructor-content reveal-right">
+                    <h3>Abdul Musawwir Nomani</h3>
+                    <p>A certified Islamic scholar and Arabic language specialist with deep expertise in Arabic grammar, speaking, reading, and writing. He founded Nomani Arabic Learning with a mission to make Arabic education accessible, professional, and effective for everyone.</p>
+                    <div class="instructor-credentials">
+                        <div class="credential">
+                            <div class="credential-icon">🎓</div>
+                            <span class="credential-text">Certified Aalim (Islamic Scholar)</span>
+                        </div>
+                        <div class="credential">
+                            <div class="credential-icon">🇸🇦</div>
+                            <span class="credential-text">Arabic Language Specialist</span>
+                        </div>
+                        <div class="credential">
+                            <div class="credential-icon">📖</div>
+                            <span class="credential-text">Arabic Grammar Expert (Nahw & Sarf)</span>
+                        </div>
+                        <div class="credential">
+                            <div class="credential-icon">🗣️</div>
+                            <span class="credential-text">Arabic Speaking Coach</span>
+                        </div>
+                        <div class="credential">
+                            <div class="credential-icon">🤝</div>
+                            <span class="credential-text">Personal Mentor & Guide</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <span class="section-label-line"></span> Student Reviews <span class="section-label-line"></span>
+                </div>
+                <h2 class="section-title">What Our Students Say</h2>
+                <p class="section-subtitle">Real feedback from students who transformed their Arabic skills with us</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
+                    <p class="testimonial-text">Excellent teaching style! The way Nomani sir explains Arabic grammar is so simple and easy to understand. I went from knowing nothing to having real conversations in Arabic.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">A</div>
+                        <div class="testimonial-author-info">
+                            <div class="name">Ahmed Khan</div>
+                            <div class="role">Student — Beginner Course</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
+                    <p class="testimonial-text">The one-to-one personal classes make such a huge difference. I get all my doubts cleared instantly and the speaking practice is amazing. Best online Arabic classes!</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">F</div>
+                        <div class="testimonial-author-info">
+                            <div class="name">Fatima Begum</div>
+                            <div class="role">Student — Full Course</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
+                    <p class="testimonial-text">Great speaking practice and personal attention. The early morning 7 AM slot is perfect — I finish my class before my day even starts. Highly recommended!</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">M</div>
+                        <div class="testimonial-author-info">
+                            <div class="name">Mohammed Irfan</div>
+                            <div class="role">Student — Grammar Course</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
+                    <p class="testimonial-text">Easy Arabic grammar explanation that even a complete beginner can follow. The custom notes are really helpful and well-organized. Worth every penny!</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">S</div>
+                        <div class="testimonial-author-info">
+                            <div class="name">Sarah Parveen</div>
+                            <div class="role">Student — Complete Program</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
+                    <p class="testimonial-text">The personal support from the teacher is outstanding. I can ask questions anytime and get detailed answers. This is truly a premium learning experience.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">R</div>
+                        <div class="testimonial-author-info">
+                            <div class="name">Rashid Ali</div>
+                            <div class="role">Student — Advanced Level</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
+                    <p class="testimonial-text">I opted for the flexible timing option and it works perfectly for me. The extra ₹500 is totally worth it. JazakAllah Nomani sir for adjusting the schedule!</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">Z</div>
+                        <div class="testimonial-author-info">
+                            <div class="name">Zainab Sheikh</div>
+                            <div class="role">Student — Flexible Batch</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section section-dark" id="pricing">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <span class="section-label-line"></span> Course Fee <span class="section-label-line"></span>
+                </div>
+                <h2 class="section-title">Investment in Your Future</h2>
+                <p class="section-subtitle">Choose the plan that suits your schedule — premium Arabic education at an affordable price</p>
+            </div>
+            <div class="pricing-wrapper">
+                <!-- Regular Plan -->
+                <div class="pricing-card featured reveal-left">
+                    <div class="pricing-popular">★ Most Popular</div>
+                    <div class="pricing-header">
+                        <span class="pricing-tag">Regular Batch</span>
+                        <h3>Morning Batch</h3>
+                        <div class="pricing-amount">
+                            <span class="currency">₹</span>
+                            <span class="price">4,999</span>
+                            <span class="period">/ month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li><span class="icon">✓</span> 6 Month Complete Program</li>
+                            <li><span class="icon">✓</span> Daily Class: 7:00 AM – 8:30 AM</li>
+                            <li><span class="icon">✓</span> Monday to Friday</li>
+                            <li><span class="icon">✓</span> Saturday & Sunday Holiday</li>
+                            <li><span class="icon">✓</span> One-to-One Personal Teaching</li>
+                            <li><span class="icon">✓</span> Speaking, Grammar, Reading & Writing</li>
+                            <li><span class="icon">✓</span> Custom Arabic Study Notes</li>
+                            <li><span class="icon">✓</span> Direct Teacher Access & Support</li>
+                            <li><span class="icon">✓</span> Learn in Urdu or English Medium</li>
+                            <li><span class="icon">✓</span> Vocabulary & Sentence Building</li>
+                        </ul>
+                        <a href="https://wa.me/919205800494?text=Assalamu%20Alaikum!%20I%20want%20to%20enroll%20in%20the%20Regular%20Morning%20Batch%20Arabic%20course." target="_blank" class="btn-primary pricing-cta">
+                            Enroll Now ✦
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Flexible Plan -->
+                <div class="pricing-card reveal-right">
+                    <div class="pricing-header">
+                        <span class="pricing-tag">Flexible Batch</span>
+                        <h3>Custom Timing</h3>
+                        <div class="pricing-amount">
+                            <span class="currency">₹</span>
+                            <span class="price">5,499</span>
+                            <span class="period">/ month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li><span class="icon">✓</span> 6 Month Complete Program</li>
+                            <li><span class="icon">✓</span> Flexible Timing (As Per Availability)</li>
+                            <li><span class="icon">✓</span> Monday to Friday</li>
+                            <li><span class="icon">✓</span> Saturday & Sunday Holiday</li>
+                            <li><span class="icon">✓</span> One-to-One Personal Teaching</li>
+                            <li><span class="icon">✓</span> Speaking, Grammar, Reading & Writing</li>
+                            <li><span class="icon">✓</span> Custom Arabic Study Notes</li>
+                            <li><span class="icon">✓</span> Direct Teacher Access & Support</li>
+                            <li><span class="icon">✓</span> Learn in Urdu or English Medium</li>
+                            <li><span class="icon">✓</span> Subject to Tutor's Schedule</li>
+                        </ul>
+                        <a href="https://wa.me/919205800494?text=Assalamu%20Alaikum!%20I%20want%20to%20enroll%20in%20the%20Flexible%20Timing%20Arabic%20course." target="_blank" class="btn-primary pricing-cta">
+                            Enroll Now ✦
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-extra-note reveal">
+                <p>💡 <strong>Regular batch</strong> runs daily from <strong>7:00 AM to 8:30 AM</strong> (Mon–Fri) at <strong>₹4,999/month</strong>. If you need a <strong>different time slot</strong> that fits with the tutor's availability, a nominal charge of <strong>₹500 extra per month</strong> applies (₹5,499/month total). Saturday & Sunday are holidays for all batches.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <span class="section-label-line"></span> Get In Touch <span class="section-label-line"></span>
+                </div>
+                <h2 class="section-title">Start Your Arabic Journey Today</h2>
+                <p class="section-subtitle">Reach out to us and take the first step towards mastering Arabic</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <h3>Let's Connect</h3>
+                    <p>Have questions about our Arabic course? Want to book a free demo class? Get in touch with us today. We'd love to help you begin your Arabic learning journey.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div class="contact-item-text">
+                                <span class="label">Call / WhatsApp</span>
+                                <span class="value"><a href="tel:+919205800494">+91 9205800494</a></span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">💬</div>
+                            <div class="contact-item-text">
+                                <span class="label">WhatsApp Chat</span>
+                                <span class="value"><a href="https://wa.me/919205800494" target="_blank">Message on WhatsApp</a></span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div class="contact-item-text">
+                                <span class="label">Location</span>
+                                <span class="value">Malakpet, Hyderabad, India</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">🕐</div>
+                            <div class="contact-item-text">
+                                <span class="label">Class Days</span>
+                                <span class="value">Monday – Friday (Sat & Sun Holiday)</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">⏰</div>
+                            <div class="contact-item-text">
+                                <span class="label">Regular Timing</span>
+                                <span class="value">7:00 AM – 8:30 AM Daily</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div class="contact-form-card">
+                        <h4>📩 Send Your Inquiry</h4>
+                        <form id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="whatsapp">WhatsApp Number</label>
+                                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="your@email.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" placeholder="Tell us about your Arabic learning goals..."></textarea>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="submit" class="btn-primary">✉ Send Inquiry</button>
+                                <a href="https://wa.me/919205800494?text=Assalamu%20Alaikum!%20I%20am%20interested%20in%20joining%20Arabic%20classes." target="_blank" class="btn-outline-gold">💬 Join WhatsApp</a>
+                            </div>
+                        </form>
+                        <div class="form-success" id="formSuccess">
+                            <div class="icon">✅</div>
+                            <h4>Thank You!</h4>
+                            <p>Your inquiry has been received. We will contact you shortly, In Shaa Allah.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-logo">
+                        <div class="nav-logo-icon">ن</div>
+                        <div class="nav-logo-text">
+                            <span>Nomani Arabic</span>
+                            <span>Learning Institute</span>
+                        </div>
+                    </a>
+                    <p>Learn Arabic with confidence. Premium online Arabic education by certified scholar Abdul Musawwir Nomani. From beginner to fluent — we guide you every step of the way.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/919205800494" target="_blank" title="WhatsApp">💬</a>
+                        <a href="tel:+919205800494" title="Call">📞</a>
+                        <a href="#contact" title="Email">✉️</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#courses">Our Courses</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#instructor">Instructor</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Course</h4>
+                    <ul>
+                        <li><a href="#courses">Arabic Speaking</a></li>
+                        <li><a href="#courses">Arabic Grammar</a></li>
+                        <li><a href="#courses">Reading & Writing</a></li>
+                        <li><a href="#courses">Vocabulary Building</a></li>
+                        <li><a href="#courses">Islamic Arabic</a></li>
+                        <li><a href="#courses">Daily Conversation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="tel:+919205800494">📞 +91 9205800494</a></li>
+                        <li><a href="https://wa.me/919205800494" target="_blank">💬 WhatsApp Chat</a></li>
+                        <li><a href="#">📍 Malakpet, Hyderabad</a></li>
+                        <li><a href="#">⏰ 7:00 AM – 8:30 AM</a></li>
+                        <li><a href="#">📅 Mon – Fri</a></li>
+                        <li><a href="#">🚫 Sat & Sun Holiday</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2025 <a href="#home">Nomani Arabic Learning</a>. All Rights Reserved. | Founder: Abdul Musawwir Nomani
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/919205800494?text=Assalamu%20Alaikum!%20I%20want%20to%20know%20about%20Arabic%20classes." target="_blank" class="float-btn float-whatsapp" aria-label="WhatsApp">
+            💬
+            <span class="tooltip">Chat on WhatsApp</span>
+        </a>
+        <a href="tel:+919205800494" class="float-btn float-call" aria-label="Call Now">
+            📞
+            <span class="tooltip">Call Now</span>
+        </a>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+    <script>
+        // Loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 1500);
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        function closeMobileMenu() {
+            mobileToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Theme toggle
+        function toggleTheme() {
+            const body = document.body;
+            const isDark = body.getAttribute('data-theme') === 'dark';
+            body.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            document.querySelectorAll('.theme-toggle').forEach(btn => {
+                btn.textContent = isDark ? '🌙' : '☀️';
+            });
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        }
+
+        document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.setAttribute('data-theme', 'dark');
+            document.querySelectorAll('.theme-toggle').forEach(btn => {
+                btn.textContent = '☀️';
+            });
+        }
+
+        // Scroll to top
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Reveal on scroll
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Counter animation
+        const counters = document.querySelectorAll('.counter-animate');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    let current = 0;
+                    const increment = target / 60;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            entry.target.textContent = target + '+';
+                            clearInterval(timer);
+                        } else {
+                            entry.target.textContent = Math.floor(current) + '+';
+                        }
+                    }, 30);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const whatsapp = document.getElementById('whatsapp').value || phone;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            this.style.display = 'none';
+            document.getElementById('formSuccess').classList.add('show');
+
+            let waMessage = `Assalamu Alaikum!%0A%0A*New Inquiry from Website*%0A%0A`;
+            waMessage += `*Name:* ${encodeURIComponent(name)}%0A`;
+            waMessage += `*Phone:* ${encodeURIComponent(phone)}%0A`;
+            waMessage += `*WhatsApp:* ${encodeURIComponent(whatsapp)}%0A`;
+            if (email) waMessage += `*Email:* ${encodeURIComponent(email)}%0A`;
+            if (message) waMessage += `*Message:* ${encodeURIComponent(message)}%0A`;
+
+            setTimeout(() => {
+                window.open(`https://wa.me/919205800494?text=${waMessage}`, '_blank');
+            }, 1500);
+
+            setTimeout(() => {
+                this.reset();
+                this.style.display = 'block';
+                document.getElementById('formSuccess').classList.remove('show');
+            }, 5000);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const offsetTop = target.offsetTop - 80;
+                        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Active nav link highlight
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY + 100;
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                const navLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+                if (navLink) {
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        document.querySelectorAll('.nav-links a').forEach(a => a.style.color = '');
+                        navLink.style.color = '#D4A843';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
